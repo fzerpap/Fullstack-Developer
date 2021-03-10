@@ -1,0 +1,42 @@
+.page-header
+  = link_to root_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    =I18n.t(:back)
+  %h1
+    =I18n.t(:user_profile)
+.wrapper.wrapper-content
+  .row.animated.fadeInRight
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-content
+          .row
+            .col-md-3.text-center
+              = image_tag current_user.avatar_image.url || 'building-avatar.gif', class: 'img-circle', height: 200
+            .col-md-8.col-md-offset-1
+              %h2
+                =I18n.t(:user_data)
+              %br
+              %h3
+                %strong
+                  =I18n.t(:full_name)
+                = current_user.full_name
+              %br
+              %h3
+                %strong
+                  =I18n.t(:email)
+                = current_user.email
+              %br
+              %h3
+                %strong
+                  =I18n.t(:role)
+                = current_user.role
+%br
+.row
+  .col-md-2.col-md-offset-4
+    = link_to profile_edit_path, class: 'btn btn-primary' do
+      =I18n.t(:edit)
+  .col-sm-2
+    = link_to edit_user_registration_path, class: 'btn btn-warning btn-primary' do
+      =I18n.t(:change_password)
+
+

@@ -1,0 +1,40 @@
+.page-header
+  = link_to users_new_path, class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    =I18n.t(:new_user)
+  %h1
+    =I18n.t(:listing_users)
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover.dataTables-example
+    %thead
+      %tr
+        %th
+          =I18n.t(:avatar)
+        %th
+          =I18n.t(:full_name)
+        %th
+          =I18n.t(:email)
+        %th
+          =I18n.t(:role)
+        %th
+          =I18n.t(:actions)
+    %tbody
+      - @users.each do |user|
+        %tr
+          %td.text-center= image_tag user.avatar_image.url || 'building-avatar.gif', class: 'img-circle', height: 50
+          %td= user.full_name
+          %td= user.email
+          %td= user.role
+          %td
+            = link_to user_edit_user_path(user) do
+              %i.fa.fa-pencil
+              =I18n.t(:edit)
+            &nbsp;
+            &nbsp;
+            - if user.role == 'no_admin'
+              = link_to user_delete_user_path(user), data: { confirm: I18n.t(:are_you_sure) }, method: :delete do
+                %i.fa.fa-trash
+                =I18n.t(:destroy)
+
+
+

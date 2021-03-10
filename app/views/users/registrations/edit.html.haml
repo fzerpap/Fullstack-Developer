@@ -1,0 +1,24 @@
+.page-header
+  = link_to profile_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    =I18n.t(:back)
+  %h1
+    =I18n.t(:change_password)
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal m-t-m' , id: 'edit_password_profile'}) do |f|
+  = devise_error_messages!
+  .form-group
+    = f.label :current_password, I18n.t(:current_password), class: 'control-label col-sm-2'
+    .col-sm-10
+      = f.password_field :current_password, autocomplete: 'off', class: 'form-control'
+  %hr/
+  .form-group
+    = f.label :password, I18n.t(:new_password), class: 'control-label col-sm-2'
+    .col-sm-10
+      = f.password_field :password, autocomplete: 'off', class: 'form-control'
+  .form-group
+    = f.label :password_confirmation, I18n.t(:repeat_password), class: 'control-label col-sm-2'
+    .col-sm-10
+      = f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.submit I18n.t(:save), class: 'btn btn-primary'

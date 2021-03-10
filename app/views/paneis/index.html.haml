@@ -1,0 +1,28 @@
+.page-header
+  %h1
+    =I18n.t(:users_statistic)
+.row
+  .col-sm-4
+    %h2
+      = I18n.t(:total_users)
+    .form-group
+      .col-sm-10
+        = text_field_tag :total_users, @total_users, class: 'form-control', readonly: true
+.row.page-header
+  .col-sm-4
+    %h2
+      = I18n.t(:users_role)
+    .table-responsive
+      %table.table.table-striped.table-bordered.table-hover
+        %thead
+          %tr
+            %th
+              =I18n.t(:role)
+            %th
+              =I18n.t(:quantity)
+        %tbody
+          - @users_role.each do |user|
+            %tr
+              %td= user.role
+              %td= user.number_users
+    

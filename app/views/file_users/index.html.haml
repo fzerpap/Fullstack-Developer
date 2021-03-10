@@ -1,0 +1,28 @@
+.page-header
+  %h1
+    =I18n.t(:listing_users)
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover.dataTables-example
+    %thead
+      %tr
+        %th
+          =I18n.t(:full_name)
+        %th
+          =I18n.t(:email)
+        %th
+          =I18n.t(:role)
+        %th
+          =I18n.t(:errors)
+        %th
+    %tbody
+      - @users.each do |user|
+        %tr
+          %td= user['full_name']
+          %td= user['email']
+          %td= user['role']
+          %td= user[:errors]
+          %td
+            - if user[:errors] == "" 
+              %i.fa.fa-check-circle
+            - else
+              %i.fa.fa-times.circle

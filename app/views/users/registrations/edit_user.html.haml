@@ -1,0 +1,27 @@
+.page-header
+  = link_to users_index_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    =I18n.t(:back)
+  = link_to @plant, class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-info-sign
+    =I18n.t(:show)
+  %h1
+    =I18n.t(:editing_user)
+= form_for(@user, url:  users_update_user_path(id: @user), html: { method: :post, class:"form-horizontal m-t-md", id: "form_edit_user"}) do |f|
+  = devise_error_messages!
+  .form-group
+    = f.label :full_name, I18n.t(:full_name), class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :full_name, autofocus: true, class: 'form-control'
+  .form-group
+    = f.label :email, I18n.t(:email), class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.email_field :email, class: "form-control"
+  .form-group
+    = f.label I18n.t(:role), class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.select(:role, User.valid_roles.map { |x| [x.humanize.titleize, x]}, {include_blank: true}, class: 'form-control')
+  .form-group
+    .col-sm-2
+      = f.submit I18n.t(:save), class: 'btn btn-primary'
+

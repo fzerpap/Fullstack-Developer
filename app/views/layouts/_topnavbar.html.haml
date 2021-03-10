@@ -1,0 +1,26 @@
+.row.border-bottom
+  %nav.navbar.navbar-static-top{:role => "navigation", :style => "margin-bottom: 0"}
+    .navbar-header
+      %a.navbar-minimalize.minimalize-styl-2.btn.btn-primary{:href => "#"}
+        %i.fa.fa-bars
+      %form.navbar-form-custom{:action => "", :method => "post", :role => "search"}
+        .form-group
+    %ul.nav.navbar-top-links.navbar-right
+      /%li
+      /  = current_user.role.name + '(' + current_user.role.role_type + ')'
+      /%li
+      /  = link_to root_path(locale: 'pt' ) do
+      /    %i.fa.fa-flag
+      /      Portugues
+      /%li
+      /  = link_to root_path(locale: 'es' ) do
+      /    %i.fa.fa-flag
+      /      Español
+      /%li
+      /  = link_to root_path(locale: 'en') do
+      /    %i.fa.fa-flag
+      /      English
+      %li
+        = link_to destroy_user_session_path, method: :delete do
+          %i.fa.fa-sign-out
+            =I18n.t(:close_section)

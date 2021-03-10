@@ -1,0 +1,98 @@
+pt:
+  date:
+    formats:
+      default: "%d/%m/%Y"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+   
+
+  # User Registrations
+  users: 'Usuários'
+  new_user: 'Novo Usuário'
+  show_user: 'Mostrando Usuario'
+  editing_user: 'Editando Usuario'
+  listing_users: 'Listando Usuarios'
+  user_created_ok: 'The User created successfully'
+  user_updated_ok: 'The User updated successfully'
+  user_destroy_ok: 'The User destroyed successfully'
+  password_rule: 'The password must have a minimum of 8 characters'
+  avatar: 'Avatar'
+  full_name: 'Nome Completo'
+  password: 'Senha'
+  password_confirm: 'Confirmar a Senha'
+  email: 'Email'
+  email_confirm: 'Confirmar o Email'
+  empresa: 'Empresa'
+  locked: 'Bloqueado'
+  actions: 'Ações'
+  updated: 'Atualizar'
+  email_subject: 'Registro de Usuário Apex'
+  import_users: 'Importar Usuários'
+  file_upload: 'Arquivo em Excell'
+  errors: 'Erros'
+
+  # User Profile
+  user_profile: 'Perfil do Usuário'
+  user_data: 'Data do Usuário'
+  change_password: 'Trocar Senha'
+  editing_profile: 'Editando Pérfil'
+  select_image: 'Selecione Imagem'
+  role: 'Role'
+
+  # Change Password
+  current_password: 'Senha Atual'
+  new_password: 'Nova Senha'
+  repeat_password: 'Repita a Senha'
+
+  # Email Registration
+  email_welcome: 'Welcome'
+  email_your_data: 'Yours dates for entry to systema are: '
+  email_important: 'IMPORTANTE: Solo en este correo podrá visualizar su contraseña, le recomendamos cambiarla al ingresar por primera vez a nuestro sistema'
+  email_automatic: 'El presente correo es enviado automaticamente por nuestro sistema, por favor, no responda ni reenvíe mensajes a esta dirección.'
+  email_msg_change_password: 'IMPORTANTE: Solo en este correo podrá visualizar su contraseña, le recomendamos cambiarla al ingresar por primera vez a nuestro sistema'
+
+  
+  # Penel
+  total_users: 'Total de Usuários'
+  users_role: 'Usuários por Role'
+  users_statistic: 'Estadísticas de Usuários'
+  quantity: 'Quantidade'
+
+  
+      
+  # Validation messages
+  must_insert: 'Must entry '
+  are_you_sure: 'Are You Sure to Destroy'
+  not_authorize: 'You not authorize to access to the function'
+  msg_add_sale_code: "Insert barcode/Quantity and press enter"
+
+
+
+  # Buttoms
+  add: 'Agregar'
+  edit: 'Editar'
+  show: 'Mostrar'
+  destroy: 'Eliminar'
+  update: 'Atualizar'
+  back: 'Voltar'
+  return: 'Retornar'
+  cancel: 'Cancelar'
+  save: 'Guardar'
+  select: 'Selecionar'
+  send: "Enviar"
+  
+
+  # Menus
+  dashboard: 'Painel de Controle'
+  home: 'Board'
+  user: 'Usuário'
+  profile: 'Perfil'
+  password: 'Senha'
+  forgot_password: 'Esqueceou a Senha?'
+  keep_conect: 'Manter conetado'
+  countries: 'Paises'
+  get_in: 'Login'
+  close_section: 'Logout'
+  system_functions: 'Assignment Functions for the User'
+  sistema: 'FullStack-Developer'

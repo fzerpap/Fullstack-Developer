@@ -1,0 +1,30 @@
+.page-header
+  = link_to users_index_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    =I18n.t(:back)
+  = link_to users_update_user_path(@user), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    =I18n.t(:edit)
+  %h1
+    =I18n.t(:show_user)
+.wrapper.wrapper-content
+  .row.animated.fadeInRight
+    .col-md-12
+      .ibox.float-e-margins
+        .ibox-content
+          %h4
+            %strong
+              =I18n.t(:full_name)
+            = @user.full_name
+          %h4
+            %strong
+              =I18n.t(:password)
+            = @pass
+          %h4
+            %strong
+              =I18n.t(:email)
+            = @user.email
+          %h4
+            %strong
+              =I18n.t(:role)
+            = @user.role

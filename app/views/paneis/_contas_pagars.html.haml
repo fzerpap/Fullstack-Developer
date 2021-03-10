@@ -1,0 +1,24 @@
+
+.page-header
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th
+          =I18n.t(:cxp)
+        %th
+          =I18n.t(:valor)
+    %tbody
+      %tr
+        %td= I18n.t(:cxp_vencidas)
+        %td= @cxp_vencidas
+      %tr
+        %td= I18n.t(:cxp_mes)
+        %td= @cxp_mes
+      %tr
+        %td= I18n.t(:cxp_prox_meses)
+        %td= @cxp_prox_meses
+      %tr
+        %td= I18n.t(:cxp_total)
+        %td= @cxp_vencidas + @cxp_mes + @cxp_prox_meses
+ 

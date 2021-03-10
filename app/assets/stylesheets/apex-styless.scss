@@ -1,0 +1,59 @@
+.home-page {
+    width: 100%;
+}
+.header-home-page {
+    height: 100px;
+}
+.body-home-page {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+     
+}
+.body-sign-in {
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: white;
+}
+.body-sign-in-logo {
+    background-color: #007dc3;
+    margin-right: 4px;
+}
+.logo{
+    padding-top: 15px;
+    scroll-padding-left: 8px;
+}
+.content-sign-in {
+    width: 400px;
+    padding-left: 15px;
+    
+
+}
+
+.header-app{
+    background-color: black;
+    height: 70px;
+}
+.header-app-links{
+    display: flex;
+    flex-direction: row;
+
+ 
+}
+.box1{
+    display: none;
+}
+.box2{
+    display: none;
+}
+.box3{
+    display: none;
+}
+.box4{
+    display: none;
+}
+
+.required {
+    color: blueviolet;    
+}
+

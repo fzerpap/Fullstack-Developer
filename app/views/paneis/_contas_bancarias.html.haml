@@ -1,0 +1,38 @@
+
+.page-header
+  %h3
+    =I18n.t(:contas_bancarias)
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover.dttb
+    %thead
+      %tr
+        %th
+          =I18n.t(:banco)
+        %th
+          =I18n.t(:nro_agencia)
+        %th
+          =I18n.t(:nro_conta)
+        %th
+          =I18n.t(:saldo)
+        %th
+    %tbody
+      - total_saldo = 0.0
+      - @conta_bancaria.each do |conta_bancarium|
+        %tr
+          %td= conta_bancarium.banco.nome
+          %td= conta_bancarium.nro_agencia
+          %td= conta_bancarium.nro_conta
+          %td= conta_bancarium.saldo
+          -
+          %td
+            - if can? :show, ContaBancarium
+              = link_to conta_bancarium_path(conta_bancarium) do
+                %i.fa.fa-search
+                &nbsp;
+                &nbsp;
+      %tr
+        %td= 'Total Saldo'
+        %td= ''
+        %td= ''
+        %td=  @conta_bancaria_saldo
+

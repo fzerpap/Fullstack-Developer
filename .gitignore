@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+/public/*
+/log/*.log
+/tmp
+/.idea/*.*
+/.idea
+/config/database.yml
+spring/*.pid
+db/schema.rb
+#Gemfile.lock
+#/vendor/*
+

@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+euro:
+  name: Euro
+
+dolar:
+  name: Dolar
+
+bs:
+  name: Bolivar
+
+real:
+  name: Real
+
