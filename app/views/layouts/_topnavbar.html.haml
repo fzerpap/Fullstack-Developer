@@ -6,20 +6,14 @@
       %form.navbar-form-custom{:action => "", :method => "post", :role => "search"}
         .form-group
     %ul.nav.navbar-top-links.navbar-right
-      /%li
-      /  = current_user.role.name + '(' + current_user.role.role_type + ')'
-      /%li
-      /  = link_to root_path(locale: 'pt' ) do
-      /    %i.fa.fa-flag
-      /      Portugues
-      /%li
-      /  = link_to root_path(locale: 'es' ) do
-      /    %i.fa.fa-flag
-      /      Español
-      /%li
-      /  = link_to root_path(locale: 'en') do
-      /    %i.fa.fa-flag
-      /      English
+      %li
+        = link_to root_path(locale: 'pt' ) do
+          %i.fa.fa-flag
+            Português
+      %li
+        = link_to root_path(locale: 'en') do
+          %i.fa.fa-flag
+            English
       %li
         = link_to destroy_user_session_path, method: :delete do
           %i.fa.fa-sign-out

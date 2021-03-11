@@ -12,12 +12,12 @@ jQuery(document).ready ->
        "user[name]":
          validators:
            notEmpty:
-             message: "Nombre de Usuario es Obligatorio"
+             message: "Nome do Usuário es Obrigatorio"
        "user[username]":
          validators:
            notEmpty:
-             message: "Login es Obligatorio"
+             message: "Login es Obrigatorio"
        "user[email]":
          validators:
            notEmpty:
-             message: "Email es Obligatorio"
+             message: "Email es Obrigatorio"

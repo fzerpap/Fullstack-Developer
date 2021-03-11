@@ -1,6 +1,0 @@
-fzerpa:
-  name: Francisco
-  username: fzerpa
-  encrypted_password: <%= BCrypt::Password.create('12345678', cost: 5) %>
-  email: fzerpap@gmail.com
-  role: super-admin

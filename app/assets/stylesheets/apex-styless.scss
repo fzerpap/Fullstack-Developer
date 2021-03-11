@@ -12,8 +12,10 @@
 }
 .body-sign-in {
     height: 100%;
+    width: 50%;
     font-size: 1.5rem;
     background-color: white;
+ 
 }
 .body-sign-in-logo {
     background-color: #007dc3;
@@ -24,8 +26,9 @@
     scroll-padding-left: 8px;
 }
 .content-sign-in {
-    width: 400px;
-    padding-left: 15px;
+    width: 50%;
+    height: 100%;
+ 
     
 
 }
@@ -40,17 +43,11 @@
 
  
 }
-.box1{
+.sign-in{
     display: none;
 }
-.box2{
-    display: none;
-}
-.box3{
-    display: none;
-}
-.box4{
-    display: none;
+.log-in{
+    display: block;
 }
 
 .required {

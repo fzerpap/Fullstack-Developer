@@ -28,9 +28,7 @@ pt:
   actions: 'Ações'
   updated: 'Atualizar'
   email_subject: 'Registro de Usuário Apex'
-  import_users: 'Importar Usuários'
-  file_upload: 'Arquivo em Excell'
-  errors: 'Erros'
+  sign_up_user_created_ok: 'Seja bem-vindo. Você já pode fazer login para entrar ao sistema'
 
   # User Profile
   user_profile: 'Perfil do Usuário'
@@ -40,20 +38,25 @@ pt:
   select_image: 'Selecione Imagem'
   role: 'Role'
 
+
   # Change Password
   current_password: 'Senha Atual'
   new_password: 'Nova Senha'
   repeat_password: 'Repita a Senha'
 
-  # Email Registration
-  email_welcome: 'Welcome'
-  email_your_data: 'Yours dates for entry to systema are: '
-  email_important: 'IMPORTANTE: Solo en este correo podrá visualizar su contraseña, le recomendamos cambiarla al ingresar por primera vez a nuestro sistema'
-  email_automatic: 'El presente correo es enviado automaticamente por nuestro sistema, por favor, no responda ni reenvíe mensajes a esta dirección.'
-  email_msg_change_password: 'IMPORTANTE: Solo en este correo podrá visualizar su contraseña, le recomendamos cambiarla al ingresar por primera vez a nuestro sistema'
-
+  # File User 
+  users: 'Usuários'
+  new_file_user: 'Importação de Usuários'
+  descrip_file_users1: 'O arquivo em excell para a importação de usuários deve conter as seguintes informações: ' 
+  descrip_file_users2: 'A primeira coluna corresponde ao Nome, a segunda ao e-mail e a terceira ao função'
+  descrip_file_users3: 'A lista dos usuários deve ficar na primeira folha (sheet)'
+  listing_file_users: 'Listando os Usuários a importar'
+  import_users: 'Importar Usuários'
+  file_upload: 'Arquivo em Excell'
+  errors: 'Erros'
+  name_file_user: 'Arquivo em Excell'
   
-  # Penel
+  # Dashboard
   total_users: 'Total de Usuários'
   users_role: 'Usuários por Role'
   users_statistic: 'Estadísticas de Usuários'
@@ -81,6 +84,7 @@ pt:
   save: 'Guardar'
   select: 'Selecionar'
   send: "Enviar"
+  import: "Importar usuários"
   
 
   # Menus
@@ -92,7 +96,8 @@ pt:
   forgot_password: 'Esqueceou a Senha?'
   keep_conect: 'Manter conetado'
   countries: 'Paises'
-  get_in: 'Login'
-  close_section: 'Logout'
+  get_in: 'Entrar'
+  sign_up: 'Inscrever-se'
+  close_section: 'Sair'
   system_functions: 'Assignment Functions for the User'
   sistema: 'FullStack-Developer'

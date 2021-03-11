@@ -5,15 +5,11 @@
         .dropdown.profile-element
           %span
             = image_tag current_user.avatar_image.url || 'avatar-user.jpg', height: 50, class:'img-circle'
-            -#%img.img-circle{:alt => "image", :src => "#{image_url 'building-avatar.gif'}", height: 50}
           %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
             %span.clear
               %span.block.m-t-xs
                 %strong.font-bold
                   = current_user.full_name 
-              /%span.text-muted.text-xs.block
-              /  = current_user.empresa.nome rescue ''
-              /  %b.caret
           %ul.dropdown-menu.animated.fadeInRight.m-t-xs
             %li
               = link_to  profile_path do
@@ -24,25 +20,26 @@
                 =I18n.t(:close_section)
         .logo-element
           VL
-      %li{class: is_active_controller('users/profiles')}
+      %li
         = link_to profile_path do
           %i.fa.fa-user
           %span.nav-label
             =I18n.t(:profile)
-      %li{class: is_active_controller('paneis')}
-        = link_to paneis_path do
-          %i.fa.fa-map-marker
-          %span.nav-label
-            = I18n.t(:dashboard)
-      %li{class: is_active_controller('users/registrations')}
-        = link_to users_index_path do
-          %i.fa.fa-user
-          %span.nav-label
-            =I18n.t(:users)
-      %li{class: is_active_controller('file_users')}
-        = link_to new_file_user_path do
-          %i.fa.fa-user
-          %span.nav-label
-            =I18n.t(:import_users)
+      - if current_user.role == 'admin'
+        %li
+          = link_to paneis_path do
+            %i.fa.fa-map-marker
+            %span.nav-label
+              = I18n.t(:dashboard)
+        %li
+          = link_to users_index_path do
+            %i.fa.fa-user
+            %span.nav-label
+              =I18n.t(:users)
+        %li
+          = link_to new_file_user_path do
+            %i.fa.fa-user
+            %span.nav-label
+              =I18n.t(:import_users)
 
  

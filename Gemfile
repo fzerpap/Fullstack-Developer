@@ -4,8 +4,7 @@ ruby '2.5.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
-#gem 'rails', '4.1.8'
-#gem 'bootstrap-sass', '3.3.0.0'
+
 gem 'bootstrap-sass'
 #gem 'font-awesome-rails', '4.3.0.0'
 gem 'font-awesome-rails'
@@ -14,9 +13,7 @@ gem 'font-awesome-rails'
 gem 'haml-rails'
 gem 'bootstrap-generators', '~> 3.3.4'
 
-
 # Use postgresql as the database for Active Record
-#gem 'pg'
 gem 'pg'
 
 # Use jquery as the JavaScript library
@@ -35,9 +32,8 @@ gem 'duktape'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 
+# internationalization
 gem 'rails-i18n'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', '~> 5'
@@ -50,15 +46,15 @@ gem 'devise'
 gem 'devise_security_extension'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+#gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
+#group :doc do
+#  # bundle exec rake doc:rails generates the API under doc/api.
+#  gem 'sdoc', require: false
+#end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -90,14 +86,14 @@ group :test do
 
 end
 
-gem 'cancancan', '~> 1.10'
+#gem 'cancancan', '~> 1.10'
 
 gem "jquery-fileupload-rails"
 
 
 gem 'coffee-script-source', '1.8.0'
 
-gem 'statsample'
+#gem 'statsample'
 
 gem 'rails_12factor', group: :production
 gem 'puma'
@@ -108,17 +104,17 @@ gem "cocoon"
 gem 'jquery-datatables'
 
 # To group for dates
-gem 'groupdate' 
+#gem 'groupdate' 
 
 # For graphics
 gem 'apexcharts'
 
 # For import data from excell
-gem 'spreadsheet'
+#gem 'spreadsheet'
 gem 'roo'
 
 # editable tables
-gem "best_in_place"
+#gem "best_in_place"
 
 # Helper for regulars class of ruby
 gem 'pundit'

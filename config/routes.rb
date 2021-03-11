@@ -2,12 +2,21 @@ Myapp::Application.routes.draw do
 
   
   root to: 'static#index'
+  get 'static/sign_up', to: 'static#sign_up'
+  post 'static/create', to: 'static#create'
 
   get  'paneis/index', to: 'paneis#index', as: :paneis
 
   resources :file_users
+  get 'file_users/import', to: 'file_users#import'
    
-  devise_for :users
+  
+  devise_for :users, controllers: {
+    passwords: 'users/passwords',
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+
 
   devise_scope :user do
     get 'users/new', to: 'users/registrations#new_user'
@@ -20,9 +29,8 @@ Myapp::Application.routes.draw do
     get 'profile', to: 'users/profiles#profile'
     get 'profile/edit', to: 'users/profiles#edit'
     post 'profile/update', to: 'users/profiles#update'
-    
-    #get 'users/import', to: 'users/registrations#import'
-    #post 'users/import_spredsheet', to: 'users/registrations#import_spredsheet'
+    delete 'profile/destroy/:id', to: 'users/profiles#destroy'
+
 
   end
 

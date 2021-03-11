@@ -20,9 +20,18 @@ class Users::ProfilesController < ApplicationController
     end
   end
 
+  def destroy
+    if user_signed_in?
+      if @user.destroy
+        redirect_to destroy_user_session_path
+      end
+    end
+    #authorize! :update, User
+  end
+
   private
     def user_params
-      params.require(:user).permit(:username, :email, :avatar, :name, :cellphone)
+      params.require(:user).permit(:full_name, :email, :avatar_image)
     end
 
 end

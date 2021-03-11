@@ -2,59 +2,49 @@
 
 jQuery(document).ready ->
 
-  $('#form_registro_user').bootstrapValidator
+  $('#form-user').bootstrapValidator
     feedbackIcons:
       valid: 'fa fa-check ',
       invalid: 'fa fa-times',
       validating: 'fa fa-refresh'
     live: 'submitted'
     fields:
-      "user[name]":
+      "user[full_name]":
         validators:
           notEmpty:
-            message: 'Debe ingresar un nombre'
-      "user[username]":
-        validators:
-          notEmpty:
-            message: 'Debe ingresar un login'
+            message: 'Deve inserir seu nome completo'
       "user[password]":
         validators:
           notEmpty:
-            message: 'Debe ingresar una contraseña'
+            message: 'Deve inserir una senha'
           regexp:
             regexp: /^(.{8,})$/
-            message: 'Contraseña mínima es de 8 carácteres'
+            message: 'Senha mínima é de 8 carácteres'
       "user[password_confirmation]":
         validators:
           notEmpty:
-            message: 'Debe ingresar un valor'
+            message: 'Deve inserir un valor'
           identical:
             field: "user[password]"
-            message: 'Las contraseñas no coinciden'
+            message: 'As senhas não coinciden'
       "user[email]":
         validators:
           notEmpty:
-            message: 'Debe ingresar el correo eléctronico del usuario.'
+            message: 'Deve inserir o email.'
+          emailAddress:
+            message: 'Deve inserir um email válido'
       "email_confirmation":
         validators:
           identical:
             field: 'user[email]'
-            message: 'Las correos deben ser identicos'
-      "user[cellphone]":
+            message: 'Os correos deven ser identicos'
+      "user[role]":
         validators:
           notEmpty:
-            message: 'Debe ingresar un número telefónico.'
-      "user[mall_id]":
-        validators:
-          notEmpty:
-            message: 'Debe seleccionar un mall.'
-      "user[role_id]":
-        validators:
-          notEmpty:
-            message: 'Debe seleccionar un rol.'
+            message: 'Deve selecionar um role'
 
 
-  $('#form_edit_user').bootstrapValidator
+  $('#form_edit_useDelete').bootstrapValidator
     feedbackIcons:
       valid: 'fa fa-check ',
       invalid: 'fa fa-times',
@@ -64,19 +54,15 @@ jQuery(document).ready ->
       "user[name]":
         validators:
           notEmpty:
-            message: 'Debe ingresar un nombre'
-      "user[username]":
-        validators:
-          notEmpty:
-            message: 'Debe ingresar un login'
+            message: 'Debe inserir un nombre'
       "user[email]":
         validators:
           notEmpty:
-            message: 'Debe ingresar el correo eléctronico del usuario.'
+            message: 'Debe inserir el correo eléctronico del usuario.'
       "user[cellphone]":
         validators:
           notEmpty:
-            message: 'Debe ingresar un número telefónico.'
+            message: 'Debe inserir un número telefónico.'
       "user[mall_id]":
         validators:
           notEmpty:
@@ -86,7 +72,7 @@ jQuery(document).ready ->
           notEmpty:
             message: 'Debe seleccionar un rol.'
 
-  $('#edit_password_profile').bootstrapValidator
+  $('#edit-password-profile').bootstrapValidator
     feedbackIcons:
       valid: 'fa fa-check ',
       invalid: 'fa fa-times',
@@ -96,16 +82,16 @@ jQuery(document).ready ->
       "user[current_password]":
         validators:
           notEmpty:
-            message: 'La contraseña actual es obligatoria'
+            message: 'A senha atual é obrigatoria'
       "user[password]":
         validators:
           notEmpty:
-            message: 'La nueva contraseña es obligatoria'
+            message: 'A nova senha é obrigatoria'
           regexp:
             regexp: /^(.{8,})$/
-            message: 'Contraseña mínima es de 8 carácteres'
+            message: 'A senha mínima é de 8 carácteres'
       "user[password_confirmation]":
         validators:
           identical:
             field: "user[password]"
-            message: 'Las contraseñas no coinciden'
+            message: 'As senhas nao coinciden'

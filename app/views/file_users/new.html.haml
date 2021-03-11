@@ -1,7 +1,14 @@
 .page-header
   = link_to file_users_path, class: 'btn btn-default' do
     %span.glyphicon.glyphicon-list-alt
-    Back
-  %h1 New file_user
+    = I18n.t(:back)
+  %h1
+    = I18n.t(:new_file_user)
+  %h5  
+    = I18n.t(:descrip_file_users1)
+  %h5  
+    = I18n.t(:descrip_file_users2)
+  %h5  
+    = I18n.t(:descrip_file_users3)
 
 = render 'form'
