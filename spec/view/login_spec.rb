@@ -1,26 +1,24 @@
 require 'rails_helper'
 
 
-describe 'Visitante faz login' do
-  let!(:role_administrator) { create(:role_administrator)}
-  let!(:empresa) { create(:empresa)}
-  let!(:country) { create(:country)}
+describe 'Visitor faz login' do
+  let!(:user) { create(:user)}
+  let!(:admin) { create(:admin)}
   
-  #let(:user) { create(:user, role_id: role_administrator.id)}
-  let!(:user) { create(:user) }
-  
-  it 'entra a pagina principal' do
-    visit '/'
+  it 'entry to the home page' do
+    visit '/users/sign_in'
     expect(page).to have_content('Esqueceou a Senha?')
   end
 
   it 'faz login' do
-    visit '/'
-    fill_in "login-username", with: 'username-1'
+    visit '/users/sign_in'
+    fill_in "login-email", with: 'user-2@umanni.com.br'
     fill_in "login-password", with: 'user12345678'
     click_button 'commit'
-    expect(page).to have_content('username-1')
-    #expect(page).to have_content(user.name)
+
+    #expect(page).to have_content('Full-Name-User-2')
+    expect(page).to have_content('Painel de Controle')
+    
   end
 
 

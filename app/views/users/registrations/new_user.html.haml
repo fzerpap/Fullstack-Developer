@@ -31,7 +31,7 @@
   .form-group
     = f.label I18n.t(:role), class: 'col-sm-2 control-label'
     .col-sm-4
-      = f.select(:role, User.valid_roles.map { |x| [x.humanize.titleize, x]}, {include_blank: true}, class: 'form-control')
+      = f.select(:role, User.valid_roles.map { |x| [x.humanize.titleize, x]}, {include_blank: true}, id: 'role', class: 'form-control')
   .form-group
     .col-sm-2
       = f.submit I18n.t(:save), class: 'btn btn-primary'

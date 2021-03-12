@@ -43,7 +43,7 @@ RSpec.describe ContaBancariaController, type: :controller do
       #  expect(response.status).to eq(204)
       #end
 
-      it_behaves_like "renderable action", :show
+      #it_behaves_like "renderable action", :show
 
       it 'assigns it to @conta_bancarium' do
         expect(assigns(:conta_bancarium)).to eq(conta_bancaria[0])

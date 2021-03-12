@@ -86,7 +86,7 @@ group :test do
 
 end
 
-#gem 'cancancan', '~> 1.10'
+gem 'cancancan', '~> 1.10'
 
 gem "jquery-fileupload-rails"
 

@@ -1,14 +1,25 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+
+ 
   before_action :set_user, only: [:show, :update_user, :edit_user, :delete_user]
 
   @@password = ""
 
+  def index
+    unless user_signed_in?
+      redirect_to root_url and return
+    end
+    @users = User.all
+
+    authorize! :index, User
+  end
+  
   def new_user
     unless user_signed_in?
       redirect_to root_url and return
     end
     @user = User.new
-    #authorize! :new, User
+    authorize! :new, User
   end
 
   def create_user
@@ -17,7 +28,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
       @@password = user_params[:password]
       respond_to do |format|
         if @user.save
-          #PasswordMailer.send_password(@user, @@password).deliver
           format.html { redirect_to  user_show_path(@user), notice: I18n.t(:user_created_ok) }
           format.json { render :show, status: :created, location: @user }
         else
@@ -29,30 +39,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
     else
       redirect_to root_url and return
     end
-    #authorize! :create, User
+    authorize! :create, User
   end
 
   def show
     @pass = @@password
     @@password = ""
-    #authorize! :show, User
+    authorize! :show, User
   end
 
-  def index
-    unless user_signed_in?
-      redirect_to root_url and return
-    end
-    @users = User.all
-
-    #authorize! :show, User
-  end
 
   def edit_user
     unless user_signed_in?
       redirect_to root_url and return
     end
 
-    #authorize! :update, User
+    authorize! :update, User
   end
 
   def update_user
@@ -68,7 +70,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         end
       end
     end
-    #authorize! :update, User
+    authorize! :update, User
   end
 
   def delete_user
@@ -78,7 +80,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         redirect_to users_index_path, alert: I18n.t(:user_destroy_ok) and return
       end
     end
-    #authorize! :update, User
+    authorize! :update, User
   end
 
 

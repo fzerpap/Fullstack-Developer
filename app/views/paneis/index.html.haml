@@ -1,6 +1,6 @@
 .page-header
   %h1
-    =I18n.t(:users_statistic)
+    =I18n.t(:dashboard)
 .row
   .col-sm-4
     %h2
@@ -23,6 +23,6 @@
         %tbody
           - @users_role.each do |user|
             %tr
-              %td= user.role
-              %td= user.number_users
+              %td= user[:role]
+              %td= user[:number_users]
     

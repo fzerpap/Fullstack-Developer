@@ -1,12 +1,13 @@
 class ApplicationController < ActionController::Base
  
-  #protect_from_forgery with: :exception
-  #rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+  protect_from_forgery with: :exception
+  before_filter :authenticate_user!
 
-  #rescue_from CanCan::AccessDenied do |exception|
-  #  flash[:alert] = I18n.t(:not_authorize)
-  #  redirect_to root_path
-  #end
+ 
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:alert] = I18n.t(:not_authorize)
+    redirect_to root_path
+  end
 
 
   before_action :set_locale

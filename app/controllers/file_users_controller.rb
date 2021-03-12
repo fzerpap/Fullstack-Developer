@@ -1,5 +1,7 @@
 class FileUsersController < ApplicationController
 
+  load_and_authorize_resource
+
   # GET /file_users or /file_users.json
   def index
     @users = $users

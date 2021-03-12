@@ -12,7 +12,7 @@ pt:
   new_user: 'Novo Usuário'
   show_user: 'Mostrando Usuario'
   editing_user: 'Editando Usuario'
-  listing_users: 'Listando Usuarios'
+  listing_users: 'Lista de Usuários'
   user_created_ok: 'The User created successfully'
   user_updated_ok: 'The User updated successfully'
   user_destroy_ok: 'The User destroyed successfully'
@@ -59,7 +59,7 @@ pt:
   # Dashboard
   total_users: 'Total de Usuários'
   users_role: 'Usuários por Role'
-  users_statistic: 'Estadísticas de Usuários'
+  dashboard: 'Painel de Controle'
   quantity: 'Quantidade'
 
   

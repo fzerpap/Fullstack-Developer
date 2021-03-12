@@ -40,7 +40,7 @@ RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
  
   
-  #config.include Capybara::DSL
+  config.include Capybara::DSL
 end
 
 Shoulda::Matchers.configure do |config|

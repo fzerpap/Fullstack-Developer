@@ -6,7 +6,7 @@ describe 'Visitante acessa a empresas' do
   let(:empresa) { create(:empresa)}
 
   before do
-    @request.env["devise.mapping"] = Devise.mappings[:empresa_administrator]
+    @request.env["devise.mapping"] = Devise.mappings[:user]
     sign_in user
   end
 
