@@ -115,6 +115,9 @@ gem 'roo'
 # Helper for regulars class of ruby
 gem 'pundit'
 
+#The simplest way to group by: day, week, hour by day, etc
+gem 'groupdate'
+
 
 
 

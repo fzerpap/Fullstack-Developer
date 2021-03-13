@@ -8,6 +8,7 @@ class StaticController < ApplicationController
 
   # GET
   def sign_up
+    puts('*********controlador static sign_up')
     @user = User.new
 
   end

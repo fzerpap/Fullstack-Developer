@@ -6,7 +6,8 @@ Myapp::Application.routes.draw do
   post 'static/create', to: 'static#create'
 
   get  'paneis/index', to: 'paneis#index', as: :paneis
-
+  get  'paneis/refresh', to: 'paneis#refresh'
+  
   resources :file_users, only: [:index, :new, :create]
   get 'file_users/import', to: 'file_users#import'
    

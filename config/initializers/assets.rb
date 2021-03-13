@@ -11,6 +11,7 @@ Rails.application.config.assets.precompile += %w( users/settings.js )
 Rails.application.config.assets.precompile += %w( users/sessions.js )
 Rails.application.config.assets.precompile += %w( static.js )
 Rails.application.config.assets.precompile += %w( file_users.js )
+Rails.application.config.assets.precompile += %w( paneis.js )
 Rails.application.config.assets.precompile += %w( cocoon.js )
 
 

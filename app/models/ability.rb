@@ -8,6 +8,7 @@ class Ability
       can :manage, :all
     else
       can :manage, :Profile
+      can :manage, :Static
     end
 
   end

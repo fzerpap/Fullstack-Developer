@@ -46,7 +46,7 @@ pt:
   # Change Password
   current_password: 'Senha Atual'
   new_password: 'Nova Senha'
-  repeat_password: 'Repita a Senha'
+  repeat_password: 'Repeta a Senha'
 
   # File User 
   users: 'Usuários'
@@ -62,9 +62,9 @@ pt:
   file_upload: 'Mostrar Usuários'
   
   # Dashboard
-  total_users: 'Total de Usuários'
-  users_role: 'Usuários por Role'
-  dashboard: 'Painel de Controle'
+  total_users: 'Total de Usuários: '
+  users_role: 'Usuários por Role: '
+  dashboard: 'Painel de Controle' 
   quantity: 'Quantidade'
 
   

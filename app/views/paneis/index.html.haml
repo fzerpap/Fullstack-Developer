@@ -1,29 +1,29 @@
 .page-header
-  %h1
-    =I18n.t(:dashboard)
-.row
+  .col-sm-12.title
+    %h1
+      =I18n.t(:dashboard)
+.row.container-dashboard
   .col-sm-4
-    %h2
-      = I18n.t(:total_users)
-    .form-group
-      .col-sm-10
-        = text_field_tag :total_users, @total_users, class: 'form-control', readonly: true
-.row.page-header
-  .col-sm-4
-    %h2
-      = I18n.t(:users_role)
-    .table-responsive
-      %table.table.table-striped.table-bordered.table-hover
-        %thead
-          %tr
-            %th
-              =I18n.t(:role)
-            %th
-              =I18n.t(:quantity)
-        %tbody
-          - @users_role.each do |user|
+    .row
+      %h2.title.sub-title
+        = I18n.t(:total_users)
+        = @total_users
+    .row
+      %h2.title.sub-title
+        = I18n.t(:users_role)
+      .table-responsive
+        %table.table.table-striped.table-bordered.table-hover
+          %thead
             %tr
-              %td= user[:role]
-              %td= user[:number_users]
-  .col-sm-6 
-    = line_chart(@series, @options_chart)
+              %th
+                =I18n.t(:role)
+              %th
+                =I18n.t(:quantity)
+          %tbody
+            - @users_role.each do |user|
+              %tr
+                %td= user[:role]
+                %td= user[:number_users]
+  .col-sm-8
+    - options = {title: 'Crecimento de Usuários', subtitle: 'Agrupado x Semana', xtitle: 'Semana', ytitle: 'Usuários', stacked: true}
+    = column_chart(@series, {**options, theme: 'palette4'})
