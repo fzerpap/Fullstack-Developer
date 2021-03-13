@@ -28,17 +28,17 @@
       - if current_user.role == 'admin'
         %li
           = link_to paneis_path do
-            %i.fa.fa-map-marker
+            %i.fa.fa-columns
             %span.nav-label
               = I18n.t(:dashboard)
         %li
-          = link_to users_index_path do
-            %i.fa.fa-user
+          = link_to users_index_path, id: 'menu-users' do
+            %i.fa.fa-users
             %span.nav-label
               =I18n.t(:users)
         %li
           = link_to new_file_user_path do
-            %i.fa.fa-user
+            %i.fa.fa-upload
             %span.nav-label
               =I18n.t(:import_users)
 

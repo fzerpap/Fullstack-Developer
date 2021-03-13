@@ -12,16 +12,16 @@
         =I18n.t(:cancel)
 .row      
   .table-responsive
-    %table.table.table-striped.table-bordered.table-hover
+    %table.table.table-striped.table-bordered.table-hover#data-table
       %thead
         %tr
-          %th
+          %th.text-center
             =I18n.t(:full_name)
-          %th
+          %th.text-center
             =I18n.t(:email)
-          %th
+          %th.text-center
             =I18n.t(:role)
-          %th
+          %th.text-center
             =I18n.t(:errors)
           %th
       %tbody
@@ -31,8 +31,8 @@
             %td= user[:email]
             %td= user[:role]
             %td= user[:errors]
-            %td
-              - if user[:errors] == "" 
+            %td{class: user[:errors].blank? ? 'valid' : 'invalid' }
+              - if user[:errors].empty? 
                 %i.fa.fa-check-circle
               - else
                 %i.fa.fa-times.circle

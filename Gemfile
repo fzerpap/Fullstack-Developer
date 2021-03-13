@@ -6,7 +6,6 @@ ruby '2.5.7'
 gem 'rails', '~> 5.0.0'
 
 gem 'bootstrap-sass'
-#gem 'font-awesome-rails', '4.3.0.0'
 gem 'font-awesome-rails'
 
 #Bootstrap-generators provides Twitter Bootstrap generators for Rails with haml
@@ -75,6 +74,8 @@ group :development do
   gem 'annotate'
 end
 
+# generates fake data.
+gem 'faker'
 
 group :test do
   gem 'rspec-rails'
@@ -93,7 +94,6 @@ gem "jquery-fileupload-rails"
 
 gem 'coffee-script-source', '1.8.0'
 
-#gem 'statsample'
 
 gem 'rails_12factor', group: :production
 gem 'puma'
@@ -103,18 +103,14 @@ gem "cocoon"
 
 gem 'jquery-datatables'
 
-# To group for dates
-#gem 'groupdate' 
 
 # For graphics
 gem 'apexcharts'
 
 # For import data from excell
-#gem 'spreadsheet'
+gem 'spreadsheet'
 gem 'roo'
 
-# editable tables
-#gem "best_in_place"
 
 # Helper for regulars class of ruby
 gem 'pundit'

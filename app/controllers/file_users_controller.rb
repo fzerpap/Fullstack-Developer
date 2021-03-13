@@ -22,11 +22,10 @@ class FileUsersController < ApplicationController
         $users = @file_user.import_users
         if $users != []
             format.html { redirect_to file_users_path, notice: "Usuarios carregados com sucesso" }
-            format.json { render :show, status: :created, location: @file_user }
         else
-          format.html { render :new, status: :unprocessable_entity }
-          format.json { render json: @file_user.errors, status: :unprocessable_entity }
+          format.html { redirect_to new_file_user_path, notice: "Arquivo inválido ou já foi atualizado no sistema." }
         end
+        @file_user.destroy
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @file_user.errors, status: :unprocessable_entity }
@@ -34,8 +33,15 @@ class FileUsersController < ApplicationController
     end
   end
 
-  def import_users
+  # GET 
+  def import
+    if User.import($users)
+      redirect_to root_path, notice: "Usuarios criados com sucesso" 
+    else
+      redirect_to root_path, notice: "Os Usuarios nao foram criados. Por favor, repeta o processo" 
+    end  
   end
+
   private
 
     # Only allow a list of trusted parameters through.

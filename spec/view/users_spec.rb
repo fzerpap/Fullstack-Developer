@@ -1,32 +1,28 @@
 require 'rails_helper'
-
+require 'view/support/authenticate'
 
 describe 'Admin access to users page ' do
+  include_context 'Authenticate'
   let(:admin) { create(:admin)}
-  let(:users) { create_create(:users,7)}
+  let(:users) { create_list(:user,5)}
+  let(:link_edit_user) { 'edit-user-'+users[1].id.to_s }
+  let(:link_destroy_user) { 'destroy-user-'+users[1].id.to_s }
 
   before do
-    @request.env["devise.mapping"] = Devise.mappings[:user]
-    sign_in admin
+    sign_in(admin)
   end
 
-  it 'entry to the home page' do
-    visit '/index'
-    expect(page).to have_content(admin.full_name)
-  end
-
-  it 'entry to the users page' do
-    visit '/users/index'
+  
+  it "get users list" do
+    click_link 'menu-users'
     expect(page).to have_content('Lista de Usuários')
   end
+   
+  it "Create new user" do
+    click_link 'menu-users'
+    click_link 'link-new-user'
+    expect(page).to have_content('Novo Usuário')
 
-  it 'entry to page to create new user' do
-    visit '/users/new'
-    expect(page).to have_content('Nome Completo')
-  end
-
-  it 'adding new user' do
-    visit '/users/new'
     within("#form-user") do
       select('Admin', from: 'role')
       fill_in "user_full_name", with: 'User-Umanni'
@@ -34,26 +30,41 @@ describe 'Admin access to users page ' do
       fill_in "email_confirmation", with: 'uumanni@gmail.com'
       fill_in "user_password", with: '12345678'
       fill_in "user_password_confirmation", with: '12345678'
-      click_button 'commit'
     end
-    expect(page).to have_content('O usuário foi criado com sucesso')
+    click_button 'commit'
 
+    expect(page).to have_content('O usuário foi criado com sucesso')  
   end
-  it 'adding user jet exist' do
-    visit '/users/new'
+
+  it "Edit user" do
+    
+    click_link 'menu-users'
+    expect(page).to have_content('Lista de Usuários')
+    click_link  link_edit_user
+    expect(page).to have_content('Editando Usuário')
+
     within("#form-user") do
       select('Admin', from: 'role')
-      fill_in "user_full_name", with: 'Full-Name-User-1'
-      fill_in "user_email", with: 'uumannix@gmail.com'
-      fill_in "email_confirmation", with: 'uumannix@gmail.com'
+      fill_in "user_full_name", with: 'User-Umanni-Edited'
+      fill_in "user_email", with: 'uumanni@gmail.com'
+      fill_in "email_confirmation", with: 'uumanni@gmail.com'
       fill_in "user_password", with: '12345678'
       fill_in "user_password_confirmation", with: '12345678'
-      click_button 'commit'
     end
-    expect(page).to have_content('Nome has already been taken')
+    click_button 'commit'
+
+    expect(page).to have_content('O usuário foi atualizado com sucesso')  
   end
 
+  it "Destroy user" do
+    
+    click_link 'menu-users'
+    expect(page).to have_content('Lista de Usuários')
+    click_link  link_destroy_user
+    expect(page).to have_content('Está seguro de excluir o usuario ?')
 
+  
+  end
 
 end
 

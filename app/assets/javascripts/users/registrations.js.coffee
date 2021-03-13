@@ -1,6 +1,8 @@
 #= require bootstrapValidator/bootstrapValidator
 
 jQuery(document).ready ->
+  
+  $("#data-table").dataTable()
 
   $('#form-user').bootstrapValidator
     feedbackIcons:

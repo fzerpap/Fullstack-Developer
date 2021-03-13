@@ -1,0 +1,8 @@
+pt:
+  errors:
+    messages:
+      not_saved: "O recurso nao pode ser ser salvo"
+    models:
+      user:  
+        attributes:
+          email: 'Email já existe para otro usuário'

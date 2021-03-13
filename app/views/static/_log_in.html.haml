@@ -3,7 +3,7 @@
     .col-md-6.body-sign-in-logo
     .col-md-6.body-sign-in
       .ibox-content.content-sign-in
-        = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'm-t'}) do |f|
+        = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'm-t', id: 'form-sign-in'}) do |f|
           .form-group
             = f.text_field :email, class:'form-control', required: '', placeholder: I18n.t(:email), id: 'login-email'
           .form-group

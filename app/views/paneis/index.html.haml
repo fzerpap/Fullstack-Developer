@@ -25,4 +25,5 @@
             %tr
               %td= user[:role]
               %td= user[:number_users]
-    
+  .col-sm-6 
+    = line_chart(@series, @options_chart)

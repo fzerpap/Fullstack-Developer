@@ -7,7 +7,7 @@ Myapp::Application.routes.draw do
 
   get  'paneis/index', to: 'paneis#index', as: :paneis
 
-  resources :file_users
+  resources :file_users, only: [:index, :new, :create]
   get 'file_users/import', to: 'file_users#import'
    
   

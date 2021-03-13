@@ -38,5 +38,31 @@ class User < ActiveRecord::Base
               .collect { |u| {role: u.role, number_users: u.number_users} }
   end
 
+  # Adding users to database from users excell
+  def self.import(users_excell)
+    sucess = false
+    users_excell.each do |user_excell| 
+      if user_excell[:errors].empty?
+        user = self.find_by_email(user_excell[:email]) rescue nil
+        if user.nil?
+          self.create!(full_name: user_excell[:full_name], email: user_excell[:email], 
+          role: user_excell[:role], password: "12345678")
+          sucess = true
+        end
+      end
+    end
+    return sucess
+  end
+
+  # return a array hash with the number of users per day, give month and year
+  # ej: [ {:day => 01/01/2021, :number_users => 99}, {:day => 02/01/2021, :number_users => 99}, ... ]
+  def self.xdia(year=0, month=0)
+    
+    select('created_at, count(*) as number_users')
+          .where('extract(year from created_at) = ? and extract(month from created_at) = ?', year, month)
+          .group(:created_at).order(:created_at)
+          .collect { |m| { data: m.created_at, number_users: m.number_users}}
+
+  end
  
 end

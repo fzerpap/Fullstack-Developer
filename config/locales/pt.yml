@@ -1,4 +1,7 @@
 pt:
+  errors:
+    messages:
+      not_saved: "%{count} errores prohibieron este %{resource} de ser guardado:" 
   date:
     formats:
       default: "%d/%m/%Y"
@@ -10,13 +13,14 @@ pt:
   # User Registrations
   users: 'Usuários'
   new_user: 'Novo Usuário'
-  show_user: 'Mostrando Usuario'
-  editing_user: 'Editando Usuario'
+  show_user: 'Mostrando Usuário'
+  editing_user: 'Editando Usuário'
   listing_users: 'Lista de Usuários'
-  user_created_ok: 'The User created successfully'
-  user_updated_ok: 'The User updated successfully'
-  user_destroy_ok: 'The User destroyed successfully'
-  password_rule: 'The password must have a minimum of 8 characters'
+  user_created_ok: 'O usuário foi criado com sucesso'
+  user_updated_ok: 'O usuário foi atualizado com sucesso'
+  user_destroy_ok: 'O usuário foi excluido com sucesso'
+  are_you_sure_destroy_user: 'Está seguro de excluir o usuario ?'
+  password_rule: 'A senha deve ter um minimo de 8 caracters'
   avatar: 'Avatar'
   full_name: 'Nome Completo'
   password: 'Senha'
@@ -55,6 +59,7 @@ pt:
   file_upload: 'Arquivo em Excell'
   errors: 'Erros'
   name_file_user: 'Arquivo em Excell'
+  file_upload: 'Mostrar Usuários'
   
   # Dashboard
   total_users: 'Total de Usuários'
@@ -66,10 +71,9 @@ pt:
       
   # Validation messages
   must_insert: 'Must entry '
-  are_you_sure: 'Are You Sure to Destroy'
-  not_authorize: 'You not authorize to access to the function'
-  msg_add_sale_code: "Insert barcode/Quantity and press enter"
-
+  are_you_sure: 'você está seguro de excluir'
+  not_authorize: 'você não está autorizado a entrar nesta função'
+  
 
 
   # Buttoms

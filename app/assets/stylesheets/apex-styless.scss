@@ -28,8 +28,7 @@
 .content-sign-in {
     width: 50%;
     height: 100%;
- 
-    
+     
 
 }
 
@@ -52,5 +51,16 @@
 
 .required {
     color: blueviolet;    
+}
+
+.valid {
+    background-color: green !important;
+    color: white !important;
+}
+
+
+.invalid {
+    background-color: crimson !important ;
+    color: white !important ;
 }
 

@@ -17,11 +17,11 @@ pt:
       session_limited: 'Se ha iniciado sesión con su cuenta en otro explorador. Por favor, inicie sesión para continuar en este explorador.'
     mailer:
       confirmation_instructions:
-        subject: "Financeiro - Confirmación de Correo"
+        subject: "Confirmación de Correo"
       reset_password_instructions:
-        subject: "Financeiro - Recuperación de Contraseña"
+        subject: "Recuperación de Contraseña"
       unlock_instructions:
-        subject: "Financeiro - Desbloqueo de cuenta"
+        subject: "Desbloqueo de cuenta"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
@@ -56,8 +56,4 @@ pt:
       expired: "ha expirado, por favor solicite uno nuevo."
       not_found: "não encontrado."
       not_locked: "não tem sido bloqueado."
-      not_saved:
-        #one: "1 error prohibio este %{resource} de ser guardado:"
-        #other: "%{count} errores prohibieron este %{resource} de ser guardado:"
-        one: "Erro:"
-        other: "Erro:"
+      not_saved: "O recurso nao pode ser ser salvo"
