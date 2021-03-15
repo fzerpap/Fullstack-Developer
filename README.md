@@ -30,6 +30,7 @@
 - Bundle install
 - Rails db:create
 - Rails db:migrate db:seed
+- Rails db:migrate RAILS_ENV=test
 
 # Steps to run the application in local mode:
 - Rails server
