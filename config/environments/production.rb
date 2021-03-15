@@ -85,15 +85,6 @@ Myapp::Application.configure do
     #Linea para precompilar los HTML en produccion
     config.assets.precompile += %w(*.html)
 
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = {
-        address: "smtp-mail.outlook.com",
-        port: 587,
-        domain: "www.conex-et.com",
-        authentication: "plain",
-        user_name: "mallrental@hotmail.com",
-        password: "holacamello1975",
-        enable_starttls_auto: true
-    }
+  
   end
 end
