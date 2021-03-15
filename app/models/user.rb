@@ -54,16 +54,5 @@ class User < ActiveRecord::Base
     return sucess
   end
 
-  # return a array hash with the number of users per day, give month and year
-  # ej: [ {:day => 01/01/2021, :number_users => 99}, {:day => 02/01/2021, :number_users => 99}, ... ]
-=begin  
-  def self.group_by_dayDelete(year = Date.today.year, month = Date.today.month)
-    
-    select('created_at, count(*) as number_users')
-          .where('extract(year from created_at) = ? and extract(month from created_at) = ?', year, month)
-          .group(:created_at).order(:created_at)
-          
 
-  end
-=end
 end

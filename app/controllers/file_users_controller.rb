@@ -19,8 +19,8 @@ class FileUsersController < ApplicationController
 
     respond_to do |format|
       if @file_user.save
-        $users = @file_user.import_users
-        if $users != []
+        $users = @file_user.import_users[:users]
+        if $users != nil
             format.html { redirect_to file_users_path, notice: "Usuarios carregados com sucesso" }
         else
           format.html { redirect_to new_file_user_path, notice: "Arquivo inválido ou já foi atualizado no sistema." }
