@@ -45,7 +45,7 @@
  
  # Steps to run the test:
  - On the terminal, type:
-  - rspec spec
+   - rspec spec
  
 
 # Unrealized tasks
