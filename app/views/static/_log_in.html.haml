@@ -9,7 +9,7 @@
             .form-group
               = f.text_field :email, class:'form-control', required: '', placeholder: I18n.t(:email), id: 'login-email'
             .form-group
-              = f.password_field :password, autocomplete: "off", placeholder: I18n.t(:password), class: 'form-control', placeholder: 'senha', required: '', id: 'login-password'
+              = f.password_field :password, autocomplete: "off", placeholder: I18n.t(:password), class: 'form-control', required: '', id: 'login-password'
             .form-group
               - if devise_mapping.rememberable?
                 = f.check_box :remember_me
