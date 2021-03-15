@@ -1,15 +1,21 @@
-# Fullstack Developer Test zerpppppaaaaaaaaaaaaaa
+# Fullstack Developer Test 
 
 - Check this readme.md
 - Create a branch to develop your task
 - Push to remote in 1 week (date will be checked from branch creation/assigned date)
 
-# Requirements:
-- Latest version of the stack
-- Write unit and integration tests 
-- Deliver with a working Dockerfile
-- Use docker-compose.yml if needed
-- Show your best practices ex: design patters, linters etc.
+# Deveopment Platform:
+- Ruby 2.5.7
+- Rails 5.0.7.2
+- HAML as hipertext language
+- SCSS for styles
+- CoffeeScript, jQuery and Ajax
+- Data base with Postgres
+- ORM (object Relational Map)
+- Tests for models and controllers with Rspec
+- Tests for view (funcional) with Capybara
+- Tests datas with FactoryGirl 
+- 
 
 # The Test
 Here we'll try to simulate a "real sprint" that you'll, probably, be assigned while working as Fullstack at Umanni.
